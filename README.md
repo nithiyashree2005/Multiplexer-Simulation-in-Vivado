@@ -1,11 +1,17 @@
 # SIMULATION AND IMPLEMENTATION OF LOGIC GATES
+
+
 ## AIM:
+
 To design and simulate a 4:1 Multiplexer (MUX) using Verilog HDL in four different modeling styles—Gate-Level, Data Flow, Behavioral, and Structural—and to verify its functionality through a testbench using the Vivado 2023.1 simulation environment. The experiment aims to understand how different abstraction levels in Verilog can be used to describe the same digital logic circuit and analyze their performance.
 
 ## APPARATUS REQUIRED:
+
 Vivado 2023.1
 
+
 ## Procedure
+
 1. Launch Vivado
 Open Vivado 2023.1 by double-clicking the Vivado icon or searching for it in the Start menu.
 2. Create a New Project
@@ -51,13 +57,16 @@ You can include the timing diagram from the simulation window showing the correc
 10. Close the Simulation
 Once done, close the simulation by going to Simulation → "Close Simulation".
 
+
 ## Logic Diagram
 
 ![image](https://github.com/user-attachments/assets/d4ab4bc3-12b0-44dc-8edb-9d586d8ba856)
 
+
 ## Truth Table
 
 ![image](https://github.com/user-attachments/assets/c850506c-3f6e-4d6b-8574-939a914b2a5f)
+
 
 ## Verilog Code
 
@@ -91,6 +100,8 @@ module mux4_to_1_gate (
     or (Y, A_and, B_and, C_and, D_and);
 endmodule
 ```
+
+
 ## Ouput:
 
 ![image](https://github.com/user-attachments/assets/29853231-c62e-44ab-a27e-2f1af4bdccf2)
@@ -117,6 +128,8 @@ module mux4_to_1_dataflow (
                (S1 & S0 & D);
 endmodule
 ```
+
+
 ## Ouput:
 
 ![image](https://github.com/user-attachments/assets/693ee320-dea5-4ef3-9aff-6ff2fca16329)
@@ -147,10 +160,11 @@ module mux4_to_1_behavioral (
     end
 endmodule
 ```
+
+
 ## Ouput:
 
 ![image](https://github.com/user-attachments/assets/32871f6c-0b4a-4a42-ae1e-15ba196dfbeb)
-
 
 
 ## 4:1 MUX Structural Implementation
@@ -188,6 +202,8 @@ module mux4_to_1_structural (
     mux2_to_1 mux_final (.A(mux_low), .B(mux_high), .S(S1), .Y(Y));
 endmodule
 ```
+
+
 ## Output:
 
 ![image](https://github.com/user-attachments/assets/52bae99c-e164-49a7-9043-c52d06b299f7)
@@ -283,10 +299,11 @@ module mux4_to_1_tb;
     end
 endmodule
 ```
+
+
 ## Output:
 
 ![image](https://github.com/user-attachments/assets/8cced224-15be-4c4c-88da-eeeaca8c0d21)
-
 
 
 ## Sample Output
@@ -297,6 +314,7 @@ Time=20 | S1=0 S0=0 | Inputs: A=0 B=0 C=0 D=1 | Y_gate=0 | Y_dataflow=0 | Y_beha
 Time=30 | S1=0 S0=1 | Inputs: A=0 B=0 C=0 D=1 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
 Time=40 | S1=1 S0=0 | Inputs: A=0 B=0 C=0 D=1 | Y_gate=0 | Y_dataflow=0 | Y_behavioral=0 | Y_structural=0
 ...
+
 
 ## Conclusion:
 
